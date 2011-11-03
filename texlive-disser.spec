@@ -1,3 +1,9 @@
+# revision 24029
+# category Package
+# catalog-ctan /macros/latex/contrib/disser
+# catalog-date 2011-09-19 19:20:18 +0200
+# catalog-license lppl
+# catalog-version 1.1.8
 Name:		texlive-disser
 Version:	1.1.8
 Release:	1
@@ -154,6 +160,7 @@ standard GOST R 7.0.5-2008, are provided.
 %doc %{_texmfdistdir}/source/latex/disser/titledefs.dtx
 %doc %{_texmfdistdir}/source/latex/disser/titlepage.dtx
 %doc %{_texmfdistdir}/source/latex/disser/toc.dtx
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -164,3 +171,5 @@ standard GOST R 7.0.5-2008, are provided.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar bibtex makeindex tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
