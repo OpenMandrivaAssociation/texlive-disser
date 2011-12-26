@@ -1,11 +1,11 @@
-# revision 24029
+# revision 24903
 # category Package
 # catalog-ctan /macros/latex/contrib/disser
-# catalog-date 2011-09-19 19:20:18 +0200
+# catalog-date 2011-12-20 06:33:33 +0100
 # catalog-license lppl
-# catalog-version 1.1.8
+# catalog-version 1.1.9
 Name:		texlive-disser
-Version:	1.1.8
+Version:	1.1.9
 Release:	1
 Summary:	Class and templates for typesetting dissertations in Russian
 Group:		Publishing
@@ -18,9 +18,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
-Conflicts:	texlive-source <= 20110705-3
 
 %description
 Disser comprises a document class and set of templates for
@@ -32,19 +29,19 @@ styles, that conform to the requirements of the Russian
 standard GOST R 7.0.5-2008, are provided.
 
 %pre
-    %_texmf_mktexlsr_pre
+    %{_sbindir}/texlive.post
 
 %post
-    %_texmf_mktexlsr_post
+    %{_sbindir}/texlive.post
 
 %preun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
+	%{_sbindir}/texlive.post
     fi
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
