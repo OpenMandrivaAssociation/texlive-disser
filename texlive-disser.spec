@@ -28,16 +28,8 @@ lists (table of contents, list of figures, etc). Bibliography
 styles, that conform to the requirements of the Russian
 standard GOST R 7.0.5-2008, are provided.
 
-%pre
-    %{_sbindir}/texlive.post
-
 %post
     %{_sbindir}/texlive.post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-    fi
 
 %postun
     if [ $1 -eq 0 ]; then
@@ -158,7 +150,6 @@ standard GOST R 7.0.5-2008, are provided.
 %doc %{_texmfdistdir}/source/latex/disser/titledefs.dtx
 %doc %{_texmfdistdir}/source/latex/disser/titlepage.dtx
 %doc %{_texmfdistdir}/source/latex/disser/toc.dtx
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -169,5 +160,3 @@ standard GOST R 7.0.5-2008, are provided.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar bibtex makeindex tex doc source %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
