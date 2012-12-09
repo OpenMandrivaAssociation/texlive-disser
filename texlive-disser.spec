@@ -160,3 +160,21 @@ standard GOST R 7.0.5-2008, are provided.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar bibtex makeindex tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.1.9-2
++ Revision: 751001
+- Rebuild to reduce used resources
+
+* Mon Dec 26 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.1.9-1
++ Revision: 745206
+- texlive-disser
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.1.8-1
++ Revision: 718238
+- texlive-disser
+- texlive-disser
+- texlive-disser
+- texlive-disser
+
