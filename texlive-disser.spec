@@ -1,12 +1,12 @@
-# revision 24903
+# revision 28342
 # category Package
 # catalog-ctan /macros/latex/contrib/disser
-# catalog-date 2011-12-20 06:33:33 +0100
+# catalog-date 2012-11-23 11:17:42 +0100
 # catalog-license lppl
-# catalog-version 1.1.9
+# catalog-version 1.2.0
 Name:		texlive-disser
-Version:	1.1.9
-Release:	2
+Version:	1.2.0
+Release:	1
 Summary:	Class and templates for typesetting dissertations in Russian
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/disser
@@ -26,7 +26,7 @@ advantages is a simplicity of format specification for
 titlepage, headers and elements of automatically generated
 lists (table of contents, list of figures, etc). Bibliography
 styles, that conform to the requirements of the Russian
-standard GOST R 7.0.5-2008, are provided.
+standard GOST R 7.0.11-2011, are provided.
 
 %post
     %{_sbindir}/texlive.post
@@ -160,21 +160,3 @@ standard GOST R 7.0.5-2008, are provided.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar bibtex makeindex tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.1.9-2
-+ Revision: 751001
-- Rebuild to reduce used resources
-
-* Mon Dec 26 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.1.9-1
-+ Revision: 745206
-- texlive-disser
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.1.8-1
-+ Revision: 718238
-- texlive-disser
-- texlive-disser
-- texlive-disser
-- texlive-disser
-
