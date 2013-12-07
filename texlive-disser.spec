@@ -6,7 +6,7 @@
 # catalog-version 1.2.0
 Name:		texlive-disser
 Version:	1.2.0
-Release:	4
+Release:	5
 Summary:	Class and templates for typesetting dissertations in Russian
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/disser
