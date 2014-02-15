@@ -1,12 +1,12 @@
-# revision 28342
+# revision 32509
 # category Package
 # catalog-ctan /macros/latex/contrib/disser
-# catalog-date 2012-11-23 11:17:42 +0100
+# catalog-date 2013-12-30 11:37:42 +0100
 # catalog-license lppl
-# catalog-version 1.2.0
+# catalog-version 1.3.0
 Name:		texlive-disser
-Version:	1.2.0
-Release:	5
+Version:	1.3.0
+Release:	1
 Summary:	Class and templates for typesetting dissertations in Russian
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/disser
@@ -80,6 +80,8 @@ standard GOST R 7.0.11-2011, are provided.
 %doc %{_texmfdistdir}/doc/latex/disser/templates/candidate/autoref.tex
 %doc %{_texmfdistdir}/doc/latex/disser/templates/candidate/common.tex
 %doc %{_texmfdistdir}/doc/latex/disser/templates/candidate/concl.tex
+%doc %{_texmfdistdir}/doc/latex/disser/templates/candidate/defs.tex
+%doc %{_texmfdistdir}/doc/latex/disser/templates/candidate/dict.tex
 %doc %{_texmfdistdir}/doc/latex/disser/templates/candidate/fig/Makefile
 %doc %{_texmfdistdir}/doc/latex/disser/templates/candidate/fig/facsimile.eps
 %doc %{_texmfdistdir}/doc/latex/disser/templates/candidate/fig/nomake.cmd
@@ -95,6 +97,8 @@ standard GOST R 7.0.11-2011, are provided.
 %doc %{_texmfdistdir}/doc/latex/disser/templates/doctor/autoref.tex
 %doc %{_texmfdistdir}/doc/latex/disser/templates/doctor/common.tex
 %doc %{_texmfdistdir}/doc/latex/disser/templates/doctor/concl.tex
+%doc %{_texmfdistdir}/doc/latex/disser/templates/doctor/defs.tex
+%doc %{_texmfdistdir}/doc/latex/disser/templates/doctor/dict.tex
 %doc %{_texmfdistdir}/doc/latex/disser/templates/doctor/fig/Makefile
 %doc %{_texmfdistdir}/doc/latex/disser/templates/doctor/fig/facsimile.eps
 %doc %{_texmfdistdir}/doc/latex/disser/templates/doctor/fig/nomake.cmd
