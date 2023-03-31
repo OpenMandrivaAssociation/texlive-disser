@@ -1,6 +1,6 @@
 Name:		texlive-disser
 Version:	43417
-Release:	1
+Release:	2
 Summary:	Class and templates for typesetting dissertations in Russian
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/disser
