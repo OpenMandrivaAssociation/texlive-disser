@@ -3,7 +3,7 @@ Version:	43417
 Release:	2
 Summary:	Class and templates for typesetting dissertations in Russian
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/disser
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/disser
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/disser.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/disser.doc.r%{version}.tar.xz
