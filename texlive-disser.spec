@@ -1,50 +1,28 @@
-Name:		texlive-disser
-Version:	43417
-Release:	2
+%global tl_name disser
+%global tl_revision 43417
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	1.5.0
+Release:	%{tl_revision}.1
 Summary:	Class and templates for typesetting dissertations in Russian
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/disser
-License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/disser.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/disser.doc.r%{version}.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/disser.source.r%{version}.tar.xz
+License:	lppl1.3
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/disser.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/disser.doc.r%{tl_revision}.tar.xz
+Source2:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/disser.source.r%{tl_revision}.tar.xz
 BuildArch:	noarch
+BuildSystem:	texlive
 BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+%texlive_base_requires
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-Disser comprises a document class and set of templates for
-typesetting dissertations in Russian. One of its primary
-advantages is a simplicity of format specification for
-titlepage, headers and elements of automatically generated
-lists (table of contents, list of figures, etc). Bibliography
-styles, that conform to the requirements of the Russian
+Disser comprises a document class and set of templates for typesetting
+dissertations in Russian. One of its primary advantages is a simplicity
+of format specification for titlepage, headers and elements of
+automatically generated lists (table of contents, list of figures, etc).
+Bibliography styles, that conform to the requirements of the Russian
 standard GOST R 7.0.11-2011, are provided.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/makeindex/disser
-%{_texmfdistdir}/tex/latex/disser
-%doc %{_texmfdistdir}/doc/latex/disser
-#- source
-%doc %{_texmfdistdir}/source/latex/disser
-
-#-----------------------------------------------------------------------
-%prep
-%setup -c -a1 -a2
-%autopatch -p1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar makeindex tex doc source %{buildroot}%{_texmfdistdir}
